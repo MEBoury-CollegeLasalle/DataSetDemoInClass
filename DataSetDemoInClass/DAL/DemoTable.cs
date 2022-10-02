@@ -35,10 +35,10 @@ namespace DataSetDemoInClass.DAL {
             insertCommand.Parameters.Add("@aRelationshipId", SqlDbType.Int, 4, "aRelationshipId");
             insertCommand.Parameters.Add("@aDateTime", SqlDbType.DateTime);
 
-            SqlCommand updateCommand = new SqlCommand($"UPDATE {DATABASE_TABLE_NAME} SET (" +
+            SqlCommand updateCommand = new SqlCommand($"UPDATE {DATABASE_TABLE_NAME} SET " +
                 $"aStringColumn = @aStringColumn," +
-                $"aRelationshipId = @aRelationshipId," +
-                $") WHERE (" +
+                $"aRelationshipId = @aRelationshipId" +
+                $" WHERE (" +
                 $"id = @id AND " + 
                 $"aStringColumn = @oldStringValue AND " +
                 $"aRelationshipId = @oldRelationshipId" +
